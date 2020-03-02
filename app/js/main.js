@@ -15,4 +15,13 @@ $(function () {
         setHeight: false,
         scrollButtons: false,
     })
+    $('.banner__slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        arrows: false,
+        rows: 0,
+        speed: 500,
+        cssEase: 'linear',
+    })
 })

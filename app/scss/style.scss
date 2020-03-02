@@ -4,7 +4,12 @@
 @import "animation";
 
 .header {
-  position: relative;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 50;
+  background-color: #fff;
   &::before {
     content: "";
     position: absolute;
@@ -60,6 +65,7 @@
   }
 }
 .main-slider {
+    padding-top: 90px;
   &__bg {
     min-height: 664px;
     background-repeat: no-repeat;
@@ -212,6 +218,59 @@
     &-link {
       padding: 12px 37px;
       margin-top: 50px;
+    }
+    margin-bottom: 75px;
+  }
+}
+
+.banner__slider {
+  &-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 320px;
+    background-color: #130e52;
+  }
+  &-inner {
+    text-align: center;
+    padding-top: 45px;
+    padding-bottom: 50px;
+  }
+  &-logo {
+    padding-bottom: 15px;
+    position: relative;
+    margin-bottom: 20px;
+    height: 73px;
+    img {
+      height: 100%;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      height: 3px;
+      width: 64px;
+      background-color: #dedede;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  &-info {
+    opacity: 0.8;
+    color: #fff;
+    font-family: "Raleway", sans-serif;
+    font-size: 29px;
+    font-weight: 300;
+    line-height: 29px;
+    margin-bottom: 40px;
+  }
+  &-icon {
+    border-radius: 10px;
+    & + & {
+      margin-left: 20px;
+    }
+    img {
+      border-radius: 10px;
     }
   }
 }
