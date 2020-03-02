@@ -70,6 +70,7 @@
     max-width: 480px;
     color: #fff;
     padding-top: 150px;
+    display: inline-block;
   }
   &__title {
     font-size: 36px;
@@ -100,8 +101,109 @@
       border-radius: 10px;
       object-fit: cover;
     }
-    & + &{
-        margin-left: 10px;
+    & + & {
+      margin-left: 10px;
+    }
+  }
+}
+.features {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 60px;
+    max-width: 960px;
+    margin: 0 auto;
+    margin-bottom: 70px;
+  }
+  &__item {
+    max-width: 215px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &-icon {
+      width: 100%;
+      height: 58px;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-bottom: 15px;
+      background-size: contain;
+    }
+    &-title {
+      color: #252525;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+    &-text {
+      height: 55px;
+      overflow-y: hidden;
+      color: #86878b;
+      font-family: "Open Sans", sans-serif;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
+.mCSB_inside > .mCSB_container {
+  margin-right: 0;
+}
+.map {
+  &__bg {
+    min-height: 539px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    max-width: 592px;
+    width: 100%;
+    margin-left: -110px;
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 60px;
+  }
+  &-content {
+    max-width: 510px;
+    width: 100%;
+    text-align: right;
+    padding-top: 65px;
+    padding-bottom: 85px;
+    height: 100%;
+  }
+}
+.map-content {
+  &__title {
+    padding-bottom: 40px;
+    margin-bottom: 50px;
+    &::after {
+      right: 0;
+      transform: none;
+      left: auto;
+    }
+  }
+  &__text {
+    color: #130e53;
+    font-size: 16px;
+    line-height: 20px;
+    max-width: 426px;
+    margin-left: auto;
+    margin-bottom: 130px;
+  }
+  &__btn {
+    padding: 13px 24px;
+    background-color: #009bdd;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    border: 1px solid transparent;
+    transition: .3s all;
+    &:hover{
+        background-color: transparent;
+        border: 1px solid #009bdd;
+        color: #009bdd;
     }
   }
 }
