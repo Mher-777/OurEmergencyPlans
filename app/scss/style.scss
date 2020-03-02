@@ -190,20 +190,28 @@
     margin-left: auto;
     margin-bottom: 130px;
   }
-  &__btn {
-    padding: 13px 24px;
-    background-color: #009bdd;
-    border-radius: 5px;
-    color: #fff;
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 20px;
-    border: 1px solid transparent;
-    transition: .3s all;
-    &:hover{
-        background-color: transparent;
-        border: 1px solid #009bdd;
-        color: #009bdd;
+}
+.faq__box {
+  &-item {
+    margin-top: 40px;
+    display: block;
+    text-align: center;
+  }
+  &-link {
+    color: #130e53;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 18px;
+    transition: 0.3s all;
+    &:hover {
+      font-weight: 700;
+    }
+  }
+  &-btn {
+    text-align: center;
+    &-link {
+      padding: 12px 37px;
+      margin-top: 50px;
     }
   }
 }
