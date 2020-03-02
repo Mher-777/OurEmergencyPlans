@@ -1,4 +1,107 @@
-@import 'global';
-@import 'vars';
-@import 'fonts';
-@import 'animation';
+@import "global";
+@import "vars";
+@import "fonts";
+@import "animation";
+
+.header {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    height: 3px;
+    background-color: #009bdd;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    animation-name: anim-line;
+    animation-duration: 2.5s;
+    animation-timing-function: ease-in;
+  }
+  &__inner {
+    min-height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.header__menu {
+  &-item {
+    margin-left: 25px;
+  }
+  &-link {
+    color: #130e52;
+    font-weight: 500;
+    padding: 0 17px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 3px;
+      background-color: #009bdd;
+      transition: 0.3s all;
+    }
+    &:hover {
+      text-shadow: 0.5px 0.5px;
+      &::before {
+        width: 100%;
+      }
+    }
+    &.current {
+      font-weight: 700;
+      text-shadow: 0.5px 0.5px;
+      &::before {
+        width: 100%;
+      }
+    }
+  }
+}
+.main-slider {
+  &__bg {
+    min-height: 664px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  &__inner {
+    max-width: 480px;
+    color: #fff;
+    padding-top: 150px;
+  }
+  &__title {
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 65px;
+      height: 3px;
+      background-color: #e92223;
+      bottom: 0;
+      left: 0;
+    }
+  }
+  &__text {
+    opacity: 0.8;
+    font-size: 16px;
+    line-height: 23px;
+    margin-bottom: 60px;
+  }
+  &__icon {
+    img {
+      border-radius: 10px;
+      object-fit: cover;
+    }
+    & + &{
+        margin-left: 10px;
+    }
+  }
+}
