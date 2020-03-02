@@ -65,7 +65,6 @@
   }
 }
 .main-slider {
-  
   &__bg {
     min-height: 664px;
     background-repeat: no-repeat;
@@ -329,35 +328,112 @@
   min-height: 95px;
   border-top: 1px solid #130e52;
   padding: 10px 0;
-  &__inner{
-      width: 271px;
-      margin: 0 auto;
+  &__inner {
+    width: 271px;
+    margin: 0 auto;
   }
 }
-.footer__menu{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    &-item{
-       font-size: 13px;
-       margin-right: 16px;
-       &:last-child{
-           margin-right: 0;
-       }
+.footer__menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  &-item {
+    font-size: 13px;
+    margin-right: 16px;
+    &:last-child {
+      margin-right: 0;
     }
-    &-link{
-        color: #000;
-        line-height: 25px;
-        &:hover{
-            text-decoration: underline;
+  }
+  &-link {
+    color: #000;
+    line-height: 25px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.footer__copy {
+  text-align: center;
+  &-text {
+    font-size: 13px;
+    color: #000;
+    line-height: 25px;
+  }
+}
+.features-page {
+  padding-top: 75px;
+  padding-bottom: 45px;
+  width: 100%;
+  overflow-x: hidden;
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    
+    &.row-reverse {
+      flex-direction: row-reverse;
+      .features-page__content {
+        text-align: right;
+      }
+      .section-title::after {
+        right: 0;
+        left: auto;
+      }
+    }
+  }
+  &__content {
+    max-width: 430px;
+    width: 100%;
+    padding-top: 50px;
+    &-text {
+      color: #130e53;
+      line-height: 20px;
+    }
+  }
+  &__bg {
+    min-height: 418px;
+    max-width: 489px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+}
+.section-title::after {
+  transform: none;
+  left: 0;
+}
+.section-title {
+  padding-bottom: 40px;
+  margin-bottom: 50px;
+}
+.features-page__row {
+    &:nth-child(1){
+        .features-page__bg{
+            max-width: 489px;
+            min-height: 418px;
+            margin-right: -60px;
         }
     }
-}
-.footer__copy{
-    text-align: center;
-    &-text{
-        font-size: 13px;
-        color: #000;
-        line-height: 25px;
+    &:nth-child(2){
+        .features-page__bg{
+            max-width: 765px;
+            min-height: 472px;
+            margin-left: -168px;
+        }
+    }
+    &:nth-child(3){
+        .features-page__bg{
+            max-width: 730px;
+            min-height: 611px;
+            margin-right: -165px;
+        }
+    }
+    &:nth-child(4){
+        .features-page__bg{
+            max-width: 730px;
+            min-height: 574px;
+                margin-left: -120px;
+        }
     }
 }
