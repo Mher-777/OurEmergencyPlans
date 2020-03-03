@@ -369,7 +369,7 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 50px;
-    
+
     &.row-reverse {
       flex-direction: row-reverse;
       .features-page__content {
@@ -399,41 +399,185 @@
     background-position: center;
   }
 }
-.section-title::after {
-  transform: none;
-  left: 0;
-}
+
 .section-title {
   padding-bottom: 40px;
   margin-bottom: 50px;
 }
 .features-page__row {
-    &:nth-child(1){
-        .features-page__bg{
-            max-width: 489px;
-            min-height: 418px;
-            margin-right: -60px;
-        }
+  &:nth-child(1) {
+    .features-page__bg {
+      max-width: 489px;
+      min-height: 418px;
+      margin-right: -60px;
     }
-    &:nth-child(2){
-        .features-page__bg{
-            max-width: 765px;
-            min-height: 472px;
-            margin-left: -168px;
-        }
+  }
+  &:nth-child(2) {
+    .features-page__bg {
+      max-width: 765px;
+      min-height: 472px;
+      margin-left: -168px;
     }
-    &:nth-child(3){
-        .features-page__bg{
-            max-width: 730px;
-            min-height: 611px;
-            margin-right: -165px;
-        }
+  }
+  &:nth-child(3) {
+    .features-page__bg {
+      max-width: 730px;
+      min-height: 611px;
+      margin-right: -165px;
     }
-    &:nth-child(4){
-        .features-page__bg{
-            max-width: 730px;
-            min-height: 574px;
-                margin-left: -120px;
-        }
+  }
+  &:nth-child(4) {
+    .features-page__bg {
+      max-width: 730px;
+      min-height: 574px;
+      margin-left: -120px;
     }
+  }
 }
+.faq-page {
+  padding-bottom: 100px;
+  padding-top: 85px;
+  &__description {
+    margin-bottom: 15px;
+  }
+  &__item {
+    color: #130e53;
+    font-size: 18px;
+    padding: 15px 0;
+    cursor: pointer;
+    &.active {
+      font-weight: 700;
+    }
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__content {
+    max-width: 515px;
+    width: 100%;
+    margin-right: 85px;
+  }
+  &__box {
+    max-width: 699px;
+    width: 100%;
+    box-shadow: 0 0 24px rgba(19, 14, 83, 0.29);
+    border-radius: 30px;
+    background-color: #fff;
+    padding: 45px;
+    height: 100%;
+    margin-top: 175px;
+    &-icons {
+      display: flex;
+      margin-bottom: 30px;
+    }
+    &-icon {
+      & + & {
+        margin-left: 15px;
+      }
+    }
+    &-title {
+      margin-bottom: 25px;
+      color: #130e53;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    &-text {
+      color: #38346e;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 20px;
+      p + p {
+        margin-top: 10px;
+      }
+    }
+  }
+}
+.faq-page__title {
+  &::after {
+    left: 0;
+    right: auto;
+    transform: none;
+  }
+}
+.features-page__content-title {
+  &::after {
+    transform: none;
+    left: 0;
+    right: auto;
+  }
+}
+.about-page {
+  &__bg {
+    min-height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 70px;
+  }
+  &__inner {
+    max-width: 460px;
+    width: 100%;
+    display: inline-block;
+    margin-top: 150px;
+  }
+  &__title {
+    color: #fff;
+    font-size: 36px;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 65px;
+      height: 3px;
+      bottom: 0;
+      left: 0;
+      background-color: #e92223;
+    }
+  }
+  &__description {
+    opacity: 0.8;
+    color: #fff;
+    line-height: 23px;
+    font-weight: 300;
+  }
+}
+.about-page__wrapper{
+  position: relative;
+  padding: 90px 0 100px;
+  &::before,&::after{
+    content: '';
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 285px;
+    top: 20px;
+    min-height: 499px;
+  }
+  &::before{
+    background-image: url(../images/about-page__decor-left.jpg);
+    left: 0;
+  }
+  &::after{
+    background-image: url(../images/about-page__decor-right.jpg);
+    right: 0;
+  }
+
+}
+.about-page__content{
+  padding: 0 146px;
+}
+.about-page__info{
+  line-height: 25px;
+  font-size: 20px;
+  color: #1a1a1a;
+  p + p{
+    margin-top: 30px;
+  }
+}
+
