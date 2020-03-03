@@ -44,3 +44,13 @@
   animation-duration: 1s;
   animation-fill-mode: both;
 }
+#toTop {
+  &::before {
+    visibility: visible;
+    animation-name: fadeInUp;
+    animation-duration: 1.5s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+  }
+}
