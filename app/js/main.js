@@ -50,5 +50,8 @@ $(function () {
         $('body').removeClass('shadow');
         $('.header').removeClass('shadow');
     });
+    new WOW().init({
+        offset: 50, 
+    });
 
 });
