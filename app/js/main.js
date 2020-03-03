@@ -40,4 +40,15 @@ $(function () {
         }
     });
 
+    $('.header__hamburger').on('click', function(){
+        $('.header__menu').addClass('active');
+        $('body').addClass('shadow');
+        $('.header').addClass('shadow');
+    });
+    $('.header__menu-closs').on('click', function(){
+        $('.header__menu').removeClass('active');
+        $('body').removeClass('shadow');
+        $('.header').removeClass('shadow');
+    });
+
 });
